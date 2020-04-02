@@ -1,0 +1,32 @@
+/* CSS Document */
+
+
+
+
+
+img {
+width: 100%;
+}
+
+.upperLogo {
+	width: 250px;
+	margin-top: 1px;
+	margin-left: 70px;
+	margin-bottom: 7px;;
+}
+
+.mainNav {
+	height: 70px;
+	background-color: #4C4C4C;
+}
+
+.middleLogo {
+	width: 220px;
+	margin-left: 84px;
+}
+
+.lowerLogo {
+	width: 250px;
+	margin-left: 70px;
+	margin-top: 9px;
+}

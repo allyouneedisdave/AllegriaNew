@@ -1,28 +1,46 @@
 /* CSS Document */
 
 
-
-
-
 img {
 width: 100%;
 }
 
+.openingTimes {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 24px;
+	font-family: 'Montserrat', sans-serif;
+	padding-top: 10px;
+	padding-right: 10px;
+	
+	
+}
+p {
+	padding-bottom: 5px;
+}
+
+/* Header menu section */
 .upperLogo {
 	width: 250px;
 	margin-top: 1px;
 	margin-left: 70px;
-	margin-bottom: 7px;;
+	margin-bottom: 6px;;
 }
 
 .mainNav {
-	height: 70px;
-	background-color: #4C4C4C;
+	height: 75px;
+	background-color: #4C4C4C;	
 }
 
+
+
 .middleLogo {
-	width: 220px;
-	margin-left: 84px;
+	width: 225px;
+	margin-left: 82px;
+	display: block;
+	float: left;
+
 }
 
 .lowerLogo {
@@ -30,3 +48,97 @@ width: 100%;
 	margin-left: 70px;
 	margin-top: 9px;
 }
+
+nav {
+	align-content: center;
+}
+
+nav ul {
+	list-style: none;
+}
+
+nav ul li {
+	display: block;
+	float: left;
+	padding: 3px 2px;
+	margin-top: 22px;
+	margin-left: 40px;
+
+}
+
+a {
+	text-decoration: none;
+	color: #E0E0E0;
+	transition: color .5s ease;
+	font-size: 24px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+header {
+	position: relative;
+	width: auto;
+
+}
+.phoneIcon {
+	width: 20px;
+}
+
+
+
+.menuContactNumber {
+
+	text-align: right;
+	padding-top: 24px;
+	padding-right: 10px;
+}
+
+.facebookIcon {
+	width: 40px;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+
+.followUsFixed {
+	float: right;
+	display: block;
+	position: fixed;
+	top: 300px;
+	right: 0px;
+	width: 170px;
+	height: 50px;
+	background-color: #4C4C4C;
+	opacity: 80%;
+
+}
+t {
+
+	text-align: right;
+	padding-right: 5px;
+	
+}
+
+	
+/*
+.followUsFixed {
+	position: fixed;
+	text-align: right;
+	display: block;
+	float: right;
+	top: 300px;
+	right: 0px;
+	width: 300px;
+	height: 50px;
+	background-color: #4C4C4C;
+	opacity: 80%;	
+	padding-top: 24px;
+	padding-right: 10px;
+	align-items: center
+	
+}
+*/
+
+
+
+/* End of Header menu section */

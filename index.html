@@ -13,6 +13,39 @@
 	
 	<!--Header will include the main menu-->
 	<header>
+		<script>
+			$( document ).ready(function() {
+				(function ($, window, document, undefined) {
+					'use strict';
+					$(function () {
+						$("#mobileMenu").hide();
+						$(".toggleMobile").click(function() {
+							$(this).toggleClass("active");
+							$("#mobileMenu").slideToggle(500);});});
+					$(window).on("resize", function () {
+						if($(this).width() > 500) {
+							$("#mobileMenu").hide();
+							$(".toggleMobile").removeClass("active");
+						}
+					});
+						})
+				(jQuery, window, document);
+			});
+		</script>
+		<div class="toggleMobile">
+			<span class="menu1"></span>
+			<span class="menu2"></span>
+			<span class="menu3"></span>
+		</div>
+		<div id="mobileMenu">
+			<ul>
+				<li><a href="#">MENU</a></li>
+				<li><a href="#">OFFERS</a></li>
+				<li><a href="#">CONTACT</a></li>
+				<li><a href="#">FIND US</a></li>
+			</ul>
+		</div>
+		
 
 		<div class="openingTimes">
 			<p>Mon - Fri: 5pm - 10pm</p>
@@ -23,21 +56,21 @@
 		</div>
 			
 		<div class="mainNav">
-			<nav>
+			<nav >
 				<div class="middleLogo">
 					<img src="img/logotext.png"/>
 					
 				</div>
 				
-				<ul>
+				<ul id="desktopMenu">
 					<li><a href="#">MENU</a></li>
 					<li><a href="#">OFFERS</a></li>
 					<li><a href="#">CONTACT</a></li>
 					<li><a href="#">FIND US</a></li>
 				</ul>
 				
-				<div class="menuContactNumber">
-					<a href="#">
+				<div  class="menuContactNumber">
+					<a id="menuContactDesktop" href="#">
 						<img class="phoneIcon" src="img/phone.png"/>
 						01253 781 936
 					</a>
@@ -56,10 +89,38 @@
 		<div class="followUsFixed">
 			
 				<img class="facebookIcon" src="img/facebook.png"/>
-				<t>follow us</t>
+				<t style="position: relative;top: 5px;">follow us</t>
 			
 		</div>
 			</a>
 	
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		
 </body>
 </html>

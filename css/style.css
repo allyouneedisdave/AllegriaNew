@@ -1,237 +1,218 @@
 /* CSS Document */
 
-
 img {
-width: 100%;
+    width: 100%;
 }
 
 .openingTimes {
-	position: absolute;
-	top: 0;
-	right: 0;
-	font-size: 24px;
-	font-family: 'Montserrat', sans-serif;
-	padding-top: 25px;
-	padding-right: 10px;
-	text-align: right
-	
-	
-}
-p {
-	padding-bottom: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 25px;
+    padding-right: 10px;
+    text-align: right
 }
 
+p {
+    padding-bottom: 5px;
+}
+
+
 /* Header menu section */
+
 .upperLogo {
-	width: 230px;
-	margin-top: 1px;
-	margin-left: 80px;
-	margin-bottom: 4px;;
+    width: 230px;
+    margin-top: 1px;
+    margin-left: 80px;
+    margin-bottom: 4px;
+    ;
 }
 
 .mainNav {
-	height: 67px;
-	background-color: #333333;	
+    height: 67px;
+    background-color: #333333;
 }
 
-
 .middleLogo {
-	width: 188px;
-	margin-left: 102px;
-	display: block;
-	float: left;
-	margin-top: 3px;
-
+    width: 188px;
+    margin-left: 102px;
+    display: block;
+    float: left;
+    margin-top: 3px;
 }
 
 .lowerLogo {
-	width: 230px;
-	margin-left: 80px;
-	margin-top: 7px;
+    width: 230px;
+    margin-left: 80px;
+    margin-top: 7px;
 }
 
 nav {
-	align-content: center;
+    align-content: center;
 }
 
 nav ul {
-	list-style: none;
+    list-style: none;
 }
 
 nav ul li {
-	display: block;
-	float: left;
-	padding: 3px 2px;
-	margin-top: 20px;
-	margin-left: 40px;
-
+    display: block;
+    float: left;
+    padding: 3px 2px;
+    margin-top: 20px;
+    margin-left: 40px;
 }
 
 a {
-	text-decoration: none;
-	color: #E0E0E0;
-	transition: color .5s ease;
-	font-size: 24px;
-	font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #E0E0E0;
+    transition: color .5s ease;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 header {
-	position: relative;
-	width: auto;
-
+    position: relative;
+    width: auto;
 }
+
 .phoneIcon {
-	width: 20px;
+    width: 20px;
 }
-
-
 
 .menuContactNumber {
+    text-align: right;
+    padding-top: 22px;
+    padding-right: 10px;
+}
 
-	text-align: right;
-	padding-top: 22px;
-	padding-right: 10px;
-	
+@media (max-width: 900px) {
+    .menuContactNumber {
+        padding-top: 16px;
+    }
 }
 
 .facebookIcon {
-	width: 40px;
-	vertical-align: middle;
-	padding-left: 5px;
-	padding-right: 5px;
-	padding-top: 5px;
-	
+    width: 40px;
+    vertical-align: middle;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
 }
-
 
 #followUsBox {
-
-	position: fixed;
-	top: 300px;
-	right: 0px;
-	width: 170px;
-	height: 50px;
-	background-color: #4C4C4C;
-	opacity: 80%;
-	
-	
-
+    position: fixed;
+    top: 300px;
+    right: 0px;
+    width: 170px;
+    height: 50px;
+    background-color: #4C4C4C;
+    opacity: 80%;
 }
+
 #followUsText {
-
-	text-align: right;
-	padding-right: 5px;
-
-
-	
-	
+    text-align: right;
+    padding-right: 5px;
 }
 
 
 /* Mobile section */
 
 #mobileMenu {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
 }
 
 #mobileMenu ul li {
-	display: block;
-	background-color: #E56038;
-	color: #fff;
-	padding: 12px 0;
-	letter-spacing: 0 .1em;
-	text-align: center;
-	text-transform: uppercase;
-	border-bottom: 1px solid #cc5836;
+    display: block;
+    background-color: #E56038;
+    color: #fff;
+    padding: 12px 0;
+    letter-spacing: 0 .1em;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid #cc5836;
 }
 
 .toggleMobile {
-	display: none;
+    display: none;
 }
 
-
-
-@media (max-width: 1100px){
-
-	#menuContactDesktop {
-		display: none;
-		cursor: pointer;
-	}
-
-/*	.upperLogo {
+@media (max-width: 1100px) {
+    #menuContactDesktop {
+        display: none;
+        cursor: pointer;
+    }
+    /*	.upperLogo {
 		display: none;
 	}
 	.lowerLogo {
 		display: none;
 	}*/
-	
-/*		#mobileMenu {
+    /*		#mobileMenu {
 		display: block;
 		z-index: 99;
 	}*/
-	
 }
+
 
 /* Remove menu links and add hamburger*/
-@media (max-width: 900px){
-	#desktopMenu {
-		display: none;
-	}
-		.toggleMobile {
-/*		position: fixed;
+
+@media (max-width: 900px) {
+    #desktopMenu {
+        display: none;
+    }
+    .toggleMobile {
+        /*		position: fixed;
 		top: 10px;
 		left: 10px;*/
-		display: block;
-		width: 40px;
-		height: 36px;
-		cursor: pointer;
-		z-index: 999;
-		
-	}
-	.toggleMobile span.menu1, .toggleMobile span.menu2, .toggleMobile span.menu3 {
-	
-		top: 117px;
-		display: block;
-		position: absolute;
-		width: 45px;
-		height: 6.5px;
-		right: 0px;
-		background: #EDA28C;
-		-webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-		transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-		margin-right: 18px;
-		border-radius: 1.6em
-	}
-	.toggleMobile span.menu1 {
-	vertical-align: middle;
-		background: #009246;
-	
-	}
-	.toggleMobile span.menu2 {
-		vertical-align: middle;
-		margin-top: 15px;
-		background: #FFFFFF;
-		
-	}
-	.toggleMobile span.menu3 {
- 				vertical-align: middle;
-		margin-top: 30px;
-		background: #CE2B37;
-	}
+        display: block;
+        width: 40px;
+        height: 36px;
+        cursor: pointer;
+        z-index: 999;
+    }
+    .toggleMobile span.menu1,
+    .toggleMobile span.menu2,
+    .toggleMobile span.menu3 {
+        display: block;
+        position: absolute;
+        width: 45px;
+        height: 6.5px;
+        right: 0px;
+        background: #EDA28C;
+        -webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
+        transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
+        margin-right: 18px;
+        border-radius: 1.6em
+    }
+    .toggleMobile span.menu1 {
+        vertical-align: middle;
+        background: #009246;
+    }
+    .toggleMobile span.menu2 {
+        vertical-align: middle;
+        margin-top: 15px;
+        background: #FFFFFF;
+    }
+    .toggleMobile span.menu3 {
+        vertical-align: middle;
+        margin-top: 30px;
+        background: #CE2B37;
+    }
 }
 
-@media (max-width: 680px){
-	.openingTimes {
-		display: none;
-	}
-
-
-
+@media (max-width: 680px) {
+    .openingTimes {
+        display: none;
+    }
 }
+
 
 /*@media (max-width: 765px) {
 	#mobileMenu {
@@ -296,6 +277,8 @@ header {
 	
 }
 */
+
+
 /* End of mobile section */
 
 

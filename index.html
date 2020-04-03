@@ -31,12 +31,12 @@
 						})
 				(jQuery, window, document);
 			});
+			
+			
+			
+			
 		</script>
-		<div class="toggleMobile">
-			<span class="menu1"></span>
-			<span class="menu2"></span>
-			<span class="menu3"></span>
-		</div>
+		
 		<div id="mobileMenu">
 			<ul>
 				<li><a href="#">MENU</a></li>
@@ -51,17 +51,18 @@
 			<p>Mon - Fri: 5pm - 10pm</p>
 			<p>Sat - Sun: 12pm - 10pm</p>
 		</div>
-		<div class="upperLogo">
+		<div id="upperLogoSun" class="upperLogo">
 			<img  src="img/sunupperdark.png"/>
 		</div>
 			
-		<div class="mainNav">
+		<div id="mainNavTop"  class="mainNav">
 			<nav >
 				<div class="middleLogo">
 					<img src="img/logotext.png"/>
 					
 				</div>
 				
+
 				<ul id="desktopMenu">
 					<li><a href="#">MENU</a></li>
 					<li><a href="#">OFFERS</a></li>
@@ -78,22 +79,30 @@
 					
 				</div>
 				
+		<div class="toggleMobile">
+			<span class="menu1"></span>
+			<span class="menu2"></span>
+			<span class="menu3"></span>
+		</div>
+				
+				
 			</nav>
 		</div>
 		
-		<div class="lowerLogo">
+		<div id="lowerLogoSun" class="lowerLogo">
 			<img src="img/sunlowerdark.png"
 		</div>
 	</header>
 		<a href="#">
-		<div class="followUsFixed">
+		<div id="followUsBox" class="followUsFixed">
 			
 				<img class="facebookIcon" src="img/facebook.png"/>
-				<t style="position: relative;top: 5px;">follow us</t>
+				<t id="followUsText" style="position: relative;top: 5px;">follow us</t>
 			
 		</div>
 			</a>
 	
+		<p id="showScroll">Lorem ipsum</p>
 		<p>Lorem ipsum</p>
 		<p>Lorem ipsum</p>
 		<p>Lorem ipsum</p>
@@ -121,6 +130,78 @@
 		<p>Lorem ipsum</p>
 		<p>Lorem ipsum</p>
 		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		<p>Lorem ipsum</p>
+		
+		<script>
+			window.onscroll = function() {
+				
+				if(window.pageYOffset > 111){
+					document.getElementById("mainNavTop").style.position = "fixed";
+					document.getElementById("mainNavTop").style.top = 0;
+					document.getElementById("mainNavTop").style.width = "100%";
+					document.getElementById("lowerLogoSun").style.display = "none";
+					document.getElementById("upperLogoSun").style.display = "none";
+					document.getElementById("followUsText").style.display = "none";
+					document.getElementById("followUsBox").style.width = "50px";
+
+					
+				}else{
+					document.getElementById("mainNavTop").style.position = "relative";
+					document.getElementById("mainNavTop").style.top = 40;
+					document.getElementById("mainNavTop").style.width = "100%";
+					document.getElementById("lowerLogoSun").style.display = "block";
+					document.getElementById("upperLogoSun").style.display = "block";
+					document.getElementById("followUsText").style.display = "block";
+					document.getElementById("followUsText").style="position: relative;top: 5px;"
+					document.getElementById("followUsBox").style.width = "170px";
+				}
+				
+			}
+			
+			
+			//window.onscroll = function() {
+//				document.getElementById('showScroll').innerHTML = window.pageYOffset;
+//				if(window.pageYOffset > 111){
+//					document.getElementById("lowerLogoSun").style.display = "none";
+//					document.getElementById("upperLogoSun").style.display = "none";
+//					//document.getElementById("mainNavTop").style.position = "absolute";
+//				//}else{
+//					//if(document.getElementById("lowerLogoSun").style.display == "none") {
+//					//document.getElementById("lowerLogoSun").style.display = "block";
+//					}
+//
+//				}
+//				
+//			};
+						
+		//window.addEventListener('scroll', function() {
+//  document.getElementById('showScroll').innerHTML = window.pageYOffset + 'px';
+//			if(window.pageYOffset > 111){
+//				document.getElementsByClassName("upperLogo").style.display = none;
+//				document.getElementsByClassName("lowerLogo").style.display = none;
+//			}else{
+//				
+//			}
+//			
+//
+//});
+		</script>
 		
 </body>
 </html>

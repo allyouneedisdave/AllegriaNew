@@ -13,6 +13,7 @@ width: 100%;
 	font-family: 'Montserrat', sans-serif;
 	padding-top: 25px;
 	padding-right: 10px;
+	text-align: right
 	
 	
 }
@@ -22,33 +23,31 @@ p {
 
 /* Header menu section */
 .upperLogo {
-	width: 250px;
+	width: 230px;
 	margin-top: 1px;
-	margin-left: 70px;
-	margin-bottom: 6px;;
+	margin-left: 80px;
+	margin-bottom: 4px;;
 }
 
 .mainNav {
-	height: 75px;
-	background-color: #4C4C4C;	
+	height: 67px;
+	background-color: #333333;	
 }
 
 
-
-
-
 .middleLogo {
-	width: 225px;
-	margin-left: 82px;
+	width: 188px;
+	margin-left: 102px;
 	display: block;
 	float: left;
+	margin-top: 3px;
 
 }
 
 .lowerLogo {
-	width: 250px;
-	margin-left: 70px;
-	margin-top: 9px;
+	width: 230px;
+	margin-left: 80px;
+	margin-top: 7px;
 }
 
 nav {
@@ -63,7 +62,7 @@ nav ul li {
 	display: block;
 	float: left;
 	padding: 3px 2px;
-	margin-top: 22px;
+	margin-top: 20px;
 	margin-left: 40px;
 
 }
@@ -90,8 +89,9 @@ header {
 .menuContactNumber {
 
 	text-align: right;
-	padding-top: 24px;
+	padding-top: 22px;
 	padding-right: 10px;
+	
 }
 
 .facebookIcon {
@@ -159,6 +159,7 @@ header {
 
 	#menuContactDesktop {
 		display: none;
+		cursor: pointer;
 	}
 
 /*	.upperLogo {
@@ -193,6 +194,7 @@ header {
 	}
 	.toggleMobile span.menu1, .toggleMobile span.menu2, .toggleMobile span.menu3 {
 	
+		top: 117px;
 		display: block;
 		position: absolute;
 		width: 45px;
@@ -201,7 +203,7 @@ header {
 		background: #EDA28C;
 		-webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
 		transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-		margin-right: 10px;
+		margin-right: 18px;
 		border-radius: 1.6em
 	}
 	.toggleMobile span.menu1 {

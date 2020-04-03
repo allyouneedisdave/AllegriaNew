@@ -15,6 +15,10 @@ img {
     text-align: right
 }
 
+.openingTimes.active {
+	display: none;
+}
+
 p {
     padding-bottom: 5px;
 }
@@ -23,6 +27,7 @@ p {
 /* Header menu section */
 
 .upperLogo {
+	display: block;
     width: 230px;
     margin-top: 1px;
     margin-left: 80px;
@@ -30,9 +35,24 @@ p {
     ;
 }
 
+.upperLogo.active {
+	display: none;
+}
+
 .mainNav {
+		width: 100%;
     height: 67px;
     background-color: #333333;
+	position: relative;
+	top: 40;
+
+}
+
+.mainNav.active {
+	width: 100%;
+	position: fixed;
+	top: 0;
+
 }
 
 .middleLogo {
@@ -44,9 +64,14 @@ p {
 }
 
 .lowerLogo {
+	display: block;
     width: 230px;
     margin-left: 80px;
     margin-top: 7px;
+}
+
+.lowerLogo.active {
+	display: none;
 }
 
 nav {
@@ -102,42 +127,67 @@ header {
     padding-top: 5px;
 }
 
-#followUsBox {
+.followUsBox {
     position: fixed;
     top: 300px;
     right: 0px;
     width: 170px;
     height: 50px;
-    background-color: #4C4C4C;
+    background-color: #333333;
     opacity: 80%;
 }
 
-#followUsText {
+
+.followUsText {
+	
+    text-align: right;
+    padding-right: 5px;
+}
+
+.followUsBox.active {
+    position: fixed;
+    top: 300px;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    background-color: #333333;
+    opacity: 80%;
+}
+
+
+.followUsText.active {
+	display: none;
     text-align: right;
     padding-right: 5px;
 }
 
 
+
+
 /* Mobile section */
 
 #mobileMenu {
-    position: fixed;
-    top: 0;
-    left: 0;
+   
+	position: fixed;
     width: 100%;
-    display: none;
+  
 }
+
 
 #mobileMenu ul li {
     display: block;
-    background-color: #E56038;
+
+    background-color: #333333;
     color: #fff;
     padding: 12px 0;
     letter-spacing: 0 .1em;
     text-align: center;
     text-transform: uppercase;
-    border-bottom: 1px solid #cc5836;
+	border-top: 1px solid #fff;
+
+
 }
+
 
 .toggleMobile {
     display: none;
@@ -205,6 +255,9 @@ header {
         margin-top: 30px;
         background: #CE2B37;
     }
+	
+
+	
 }
 
 @media (max-width: 680px) {

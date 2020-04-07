@@ -412,13 +412,13 @@ header {
         margin-right: auto;
     }
     .middleLogo {
-     
-        float:none;
-        margin-left:35%;
-        position:absolute;
-
-
-        
+    /* float: none; */
+    /* margin-left: 35%; */
+    position: absolute;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    padding-top: 4px;
     }
 }
 

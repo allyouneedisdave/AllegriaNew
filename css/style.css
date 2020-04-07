@@ -1,5 +1,7 @@
 /* CSS Document */
 
+html { scroll-behavior: smooth; } 
+
 img {
     width: 100%;
 }
@@ -32,7 +34,7 @@ p {
     margin-top: 1px;
     margin-left: 80px;
     margin-bottom: 4px;
-    ;
+    
 }
 
 .upperLogo.active {
@@ -101,14 +103,20 @@ a {
 header {
     position: relative;
     width: auto;
-	background-image: url("../img/food.png");
-	    background-position: top center;
+	background-image: url("../img/foodextended2.png");
+	    /*background-position: top center;*/
     background-size: cover;
     background-repeat: no-repeat;
 	z-index: 100;
 	height: 700px;
+	 background-position: center
 
 }
+
+
+
+
+
 
 .allegriaMainTitleContainer {
 
@@ -198,6 +206,7 @@ header {
 	text-align: center;
 	font-size: 20px;
 	padding-top: 12px;
+	
 	
 }
 
@@ -296,16 +305,76 @@ header {
         margin-top: 30px;
         background: #CE2B37;
     }
-	
+
+
+    .followUsBox {
+        position: fixed;
+        top: 300px;
+        right: 0px;
+        width: 50px;
+        height: 50px;
+        background-color: #333333;
+        opacity: 80%;
+    }
+    .followUsText {
+        display: none;
+        text-align: right;
+        padding-right: 5px;
+    }
+
+    .followUsBox.active {
+        position: fixed;
+        top: 300px;
+        right: 0px;
+        width: 50px;
+        height: 50px;
+        background-color: #333333;
+        opacity: 80%;
+    }
+
+
+    .followUsText.active {
+        display: none;
+        text-align: right;
+        padding-right: 5px;
+    }
 
 	
 }
 
+/*For mobile view, toggle visibility of some elements and center the logo*/
 @media (max-width: 680px) {
     .openingTimes {
         display: none;
     }
+    .upperLogo {
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .lowerLogo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .middleLogo {
+     
+        float:none;
+        margin-left:35%;
+        position:absolute;
+
+
+        
+    }
 }
+
+
+/*
+      width: 188px;
+    margin-left: 102px;
+    display: block;
+    float: left;
+    margin-top: 3px;
+
+*/
 
 
 /*@media (max-width: 765px) {

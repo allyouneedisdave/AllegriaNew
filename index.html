@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -15,6 +15,7 @@
 	<script src="js/lightbox.js"></script>
 	<script src="js/prefixfree.min.js"></script>
 	<script src="js/jquery.slides.min.js"></script>
+    <script src="js/mainjs.js"></script>
 	
 <title>Allegria Ltd - Italian Restaurant</title>
 </head>
@@ -64,12 +65,8 @@
 						})
 				(jQuery, window, document);
 			});
-			
-			
-			
-			
-		</script>
 		
+		</script>		
 		
 		
 
@@ -90,8 +87,8 @@
 				
 
 				<ul id="desktopMenu">
-					<li><a href="#">MENU</a></li>
-					<li><a href="#">OFFERS</a></li>
+					<li><a href="#page-menu">MENU</a></li>
+					<li><a href="#page-offers">OFFERS</a></li>
 					<li><a href="#">CONTACT</a></li>
 					<li><a href="#">FIND US</a></li>
 				</ul>
@@ -117,22 +114,24 @@
 		</div>
 		
 		<div id="lowerLogoSun" class="lowerLogo">
-			<img src="img/sunlowerdark.png"
+			<img src="img/sunlowerdark.png" />
 		</div>
 
 		</div>
 
 	<div id="mobileMenu" class="mobileMenuList">
 		<ul>
-			<li><a href="#">MENU</a></li>
+			<li><a href="#page-menu">MENU</a></li>
 			<li><a href="#">OFFERS</a></li>
 			<li><a href="#">CONTACT</a></li>
 			<li><a href="#">FIND US</a></li>
 		</ul>
 	</div>
-					<div class="allegriaMainTitleContainer">
+
+		<div class="allegriaMainTitleContainer">
 			<img src="img/allegriatext.png"/>
 		</div>	
+
 	</header>
 		<a href="#">
 		<div class="followUsBox">
@@ -144,77 +143,36 @@
 			</a>
 
 		
+
 		
-		<div style="height: 500px;">TEMP SPACER
-		</div>
 		
-		<div class="offersSection">
-			<div class="sectionTitle">
-				<p>OFFERS</p>
+			<div  class="sectionTitle">
+				<p id="page-offers">OFFERS</p>
 			</div>
 			<div>
-				<img src="img/"
+				<img src="img/offerspng.png"/>
 			</div>
-		</div>
+	
+	
 		<div class="sectionTitle">
-			<p>MENU</p>
+			<p id="page-menu">MENU</p>
+			
+				<img src="img/menu.jpg"/>
+
 		</div>
 		
-		<div class="sectionTitle">
+		<div id="page-contact" class="sectionTitle">
 			<p>CONTACT</p>
+
+				<img src="img/waiter.jpg"/>
+
 		</div>
 		
-		<div class="sectionTitle">
+		<div id="page-findus" class="sectionTitle">
 			<p>FIND US</p>
 		</div>
 		
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		<p>Lorem ipsum</p>
-		
-		
-		
+
 		<script>
 			var logoHidden = 0;
 
@@ -234,15 +192,21 @@
 					if(logoHidden == 1){
 						$(".upperLogo").toggleClass("active");
 						$(".lowerLogo").removeClass("active");
-						$(".openingTimes").removeClass("active");			$(".mainNav").removeClass("active");
-						$(".followUsBox").removeClass("active");			$(".followUsText").removeClass("active");
+                        $(".openingTimes").removeClass("active");
+                        $(".mainNav").removeClass("active");
+                        $(".followUsBox").removeClass("active");
+                        $(".followUsText").removeClass("active");
 						logoHidden = 0;
 						console.log("logoHidden =" + logoHidden);
 					}
 				}
 			
 			});
-			
+
+           
+
+
+
 			
 			/*$(window).scroll(function() {
 				

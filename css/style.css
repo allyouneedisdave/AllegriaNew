@@ -113,7 +113,17 @@ header {
 
 }
 
-
+/*.parallax {
+    /* The image used */
+    background-image: url("img_parallax.jpg");
+    /* Set a specific height */
+    min-height: 500px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
 
 
 
@@ -128,8 +138,54 @@ header {
 	display: block;
   margin-left: 15%;
   margin-right: 15%;
-
+  margin-top: 50px;
 }
+
+
+
+.contactImage {
+    position: relative;
+    width: auto;
+    background-image: url("../img/waiter.jpg");
+    /*background-position: top center;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    height: 700px;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menuImage {
+    position: relative;
+    width: auto;
+    background-image: url("../img/menu.jpg");
+    /*background-position: top center;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    height: 700px;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.offersImage {
+    position: relative;
+    width: auto;
+    height: auto;
+    background-image: url("../img/offerspng.png");
+    /*background-position: top center;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    height: 700px;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 
 

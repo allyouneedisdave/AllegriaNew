@@ -21,291 +21,201 @@
 </head>
 
 <body>
-	
-	<!--Header will include the main menu-->
-	<header id="page-top" class="header-image">
 
-		<script>
-			var menuHidden = 1;
-			$( document ).ready(function() {
-				(function ($, window, document, undefined) {
-					'use strict';
-					$(function () {
-						$("#mobileMenu").hide();
-						$(".toggleMobile").click(function() {
-							if(logoHidden == true){
-								//figure out how to stop mobile menu display
-								//issue when navbar is sticky
-							}else{
-							//$(this).toggleClass("active");
-							$(".upperLogo").toggleClass("active");
-							$(".lowerLogo").toggleClass("active");
-							$(".openingTimes").toggleClass("active");
-							}
-							
-							$("#mobileMenu").slideToggle(500);
-							if(menuHidden == 1){
-								menuHidden = 0;
-							}else{
-								menuHidden = 1;
-							}
-							console.log("menuHidden = " + menuHidden);
+    <!--Header will include the main menu-->
+    <header id="page-top" class="header-image">
 
-						});});
-					$(window).on("resize", function () {
-						if($(this).width() > 1100) {
-							
-							$("#mobileMenu").hide();
-							$(".toggleMobile").removeClass("active");
-							$(".lowerLogo").removeClass("active");
-							$(".openingTimes").removeClass("active");
-							menuHidden = 1;
-						}
-					});
-						})
-				(jQuery, window, document);
-			});
-		
-		</script>		
-		
-		
+        <script>
+            var menuHidden = 1;
+            $(document).ready(function () {
+                (function ($, window, document, undefined) {
+                    'use strict';
+                    $(function () {
+                        $("#mobileMenu").hide();
+                        $(".toggleMobile").click(function () {
+                            if (logoHidden == true) {
+                                //figure out how to stop mobile menu display
+                                //issue when navbar is sticky
+                            } else {
+                                //$(this).toggleClass("active");
+                                $(".upperLogo").toggleClass("active");
+                                $(".lowerLogo").toggleClass("active");
+                                $(".openingTimes").toggleClass("active");
+                            }
 
-		<div id="openingTimesTop" class="openingTimes">
-			<p>Mon - Fri: 5pm - 10pm</p>
-			<p>Sat - Sun: 12pm - 10pm</p>
-		</div>
-		<div id="upperLogoSun" class="upperLogo">
-			<img  src="img/sunupperdark.png"/>
-		</div>
-			
-		<div id="mainNavTop"  class="mainNav">
-			<nav >
-				<div class="middleLogo">
-					<img src="img/logotext.png"/>
-					
-				</div>
-				
+                            $("#mobileMenu").slideToggle(500);
+                            if (menuHidden == 1) {
+                                menuHidden = 0;
+                            } else {
+                                menuHidden = 1;
+                            }
+                            console.log("menuHidden = " + menuHidden);
 
-				<ul id="desktopMenu">
-					<li><a href="#page-menu">MENU</a></li>
-					<li><a href="#page-offers">OFFERS</a></li>
-					<li><a href="#">CONTACT</a></li>
-					<li><a href="#">FIND US</a></li>
-				</ul>
-				
-				<div  class="menuContactNumber">
-					<a id="menuContactDesktop" href="#">
-						<img class="phoneIcon" src="img/phone.png"/>
-						01253 781 936
-					</a>
-					
-					
-				</div>
-				
-		<div class="toggleMobile">
-			<span class="menu1"></span>
-			<span class="menu2"></span>
-			<span class="menu3"></span>
-		</div>
+                        });
+                    });
+                    $(window).on("resize", function () {
+                        if ($(this).width() > 1100) {
 
-				
-			</nav>
-			
-		</div>
-		
-		<div id="lowerLogoSun" class="lowerLogo">
-			<img src="img/sunlowerdark.png" />
-		</div>
+                            $("#mobileMenu").hide();
+                            $(".toggleMobile").removeClass("active");
+                            $(".lowerLogo").removeClass("active");
+                            $(".openingTimes").removeClass("active");
+                            menuHidden = 1;
+                        }
+                    });
+                })
+                    (jQuery, window, document);
+            });
 
-		</div>
-
-	<div id="mobileMenu" class="mobileMenuList">
-		<ul>
-			<li><a href="#page-menu">MENU</a></li>
-			<li><a href="#">OFFERS</a></li>
-			<li><a href="#">CONTACT</a></li>
-			<li><a href="#">FIND US</a></li>
-		</ul>
-	</div>
-
-		<div class="allegriaMainTitleContainer">
-			<img src="img/allegriatext.png"/>
-		</div>	
-
-	</header>
-		<a href="#">
-		<div class="followUsBox">
-			
-				<img class="facebookIcon" src="img/facebook.png"/>
-				<t class="followUsText" style="position: relative;top: 5px;">follow us</t>
-			
-		</div>
-			</a>
-
-		
-
-		
-		
-			<div  class="sectionTitle">
-				<p id="page-offers">OFFERS</p>
-			</div>
-			<div>
-				<img src="img/offerspng.png"/>
-			</div>
-	
-	
-		<div class="sectionTitle">
-			<p id="page-menu">MENU</p>
-			
-				<img src="img/menu.jpg"/>
-
-		</div>
-		
-		<div id="page-contact" class="sectionTitle">
-			<p>CONTACT</p>
-
-				<img src="img/waiter.jpg"/>
-
-		</div>
-		
-		<div id="page-findus" class="sectionTitle">
-			<p>FIND US</p>
-		</div>
-		
-
-		<script>
-			var logoHidden = 0;
-
-			$(window).scroll(function() {
-				if(window.pageYOffset > 102){
-					if(logoHidden == 0){
-					$(".upperLogo").toggleClass("active");
-					$(".lowerLogo").toggleClass("active");
-					$(".openingTimes").toggleClass("active");
-					$(".mainNav").toggleClass("active");
-					$(".followUsBox").toggleClass("active");
-					$(".followUsText").toggleClass("active");
-					logoHidden = 1;
-						console.log("logoHidden =" + logoHidden);
-					}
-				}else{
-					if(logoHidden == 1){
-						$(".upperLogo").toggleClass("active");
-						$(".lowerLogo").removeClass("active");
-                        $(".openingTimes").removeClass("active");
-                        $(".mainNav").removeClass("active");
-                        $(".followUsBox").removeClass("active");
-                        $(".followUsText").removeClass("active");
-						logoHidden = 0;
-						console.log("logoHidden =" + logoHidden);
-					}
-				}
-			
-			});
-
-           
+        </script>
 
 
 
-			
-			/*$(window).scroll(function() {
-				
-				if(window.pageYOffset > 111){
-					if(logoHidden == 0){
-					$(".upperLogo").toggleClass("active");
-					$(".lowerLogo").toggleClass("active");
-					$(".openingTimes").toggleClass("active");
-					$(".mainNav").toggleClass("active");
-					logoHidden = 1;
-						console.log(logoHidden);
-					}
-					//}else{
-						//if(logoHidden == 1){
-							$(".toggleMobile").removeClass("active");
-							$(".lowerLogo").removeClass("active");
-							$(".openingTimes").removeClass("active");
-							
-							$(".mainNav").removeClass("active");
-						//	logoHidden = 0;
-					//}
-				}*/
-				
-			/*	if ($(this).scrollTop() > 0) {
-					if(logoHidden == false){
-					$(".upperLogo").toggleClass("active");
-					$(".lowerLogo").toggleClass("active");
-					$(".openingTimes").toggleClass("active");
-					logoHidden = true;
-						console.log(logoHidden);
-					}
 
-				}else{
-					if(logoHidden == false && $(this).scrollTop = 0){
-						$(".toggleMobile").removeClass("active");
-							$(".lowerLogo").removeClass("active");
-							$(".openingTimes").removeClass("active");
-					}
-					//$('.lowerLogo').fadeIn();
-					logoHidden = false;
-					console.log(logoHidden);
-				}*/
-			//});
-			
-			
-//			window.onscroll = function() {
-//				
-//				if(window.pageYOffset > 111){
-//					document.getElementById("mainNavTop").style.position = "fixed";
-//					document.getElementById("mainNavTop").style.top = 0;
-//					document.getElementById("mainNavTop").style.width = "100%";
-//					document.getElementById("lowerLogoSun").style.display = "none";
-//					document.getElementById("upperLogoSun").style.display = "none";
-//					document.getElementById("followUsText").style.display = "none";
-//					document.getElementById("followUsBox").style.width = "50px";
-//				
-//
-//					
-//				}else{
-//					document.getElementById("mainNavTop").style.position = "relative";
-//					document.getElementById("mainNavTop").style.top = 40;
-//					document.getElementById("mainNavTop").style.width = "100%";
-//					document.getElementById("lowerLogoSun").style.display = "block";
-//					document.getElementById("upperLogoSun").style.display = "block";
-//					document.getElementById("followUsText").style.display = "block";
-//					document.getElementById("followUsText").style="position: relative;top: 5px;"
-//					document.getElementById("followUsBox").style.width = "170px";
-//				}
-//				
-//			}
-			
-			
-			//window.onscroll = function() {
-//				document.getElementById('showScroll').innerHTML = window.pageYOffset;
-//				if(window.pageYOffset > 111){
-//					document.getElementById("lowerLogoSun").style.display = "none";
-//					document.getElementById("upperLogoSun").style.display = "none";
-//					//document.getElementById("mainNavTop").style.position = "absolute";
-//				//}else{
-//					//if(document.getElementById("lowerLogoSun").style.display == "none") {
-//					//document.getElementById("lowerLogoSun").style.display = "block";
-//					}
-//
-//				}
-//				
-//			};
-						
-		//window.addEventListener('scroll', function() {
-//  document.getElementById('showScroll').innerHTML = window.pageYOffset + 'px';
-//			if(window.pageYOffset > 111){
-//				document.getElementsByClassName("upperLogo").style.display = none;
-//				document.getElementsByClassName("lowerLogo").style.display = none;
-//			}else{
-//				
-//			}
-//			
-//
-//});
-		</script>
-		
+
+
+
+
+
+        <div id="openingTimesTop" class="openingTimes">
+            <p>Mon - Fri: 5pm - 10pm</p>
+            <p>Sat - Sun: 12pm - 10pm</p>
+        </div>
+        <div id="upperLogoSun" class="upperLogo">
+            <img src="img/sunupperdark.png" />
+        </div>
+
+        <div id="mainNavTop" class="mainNav">
+            <nav>
+                <div class="middleLogo">
+                    <img src="img/logotext.png" />
+
+                </div>
+
+
+                <ul id="desktopMenu">
+                    <li><a href="#page-menu">MENU</a></li>
+                    <li><a href="#page-offers">OFFERS</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">FIND US</a></li>
+                </ul>
+
+                <div class="menuContactNumber">
+                    <a id="menuContactDesktop" href="#">
+                        <img class="phoneIcon" src="img/phone.png" />
+                        01253 781 936
+                    </a>
+
+
+                </div>
+
+                <div class="toggleMobile">
+                    <span class="menu1"></span>
+                    <span class="menu2"></span>
+                    <span class="menu3"></span>
+                </div>
+
+
+            </nav>
+
+        </div>
+
+
+
+        <div id="lowerLogoSun" class="lowerLogo">
+            <img src="img/sunlowerdark.png" />
+        </div>
+
+
+
+        <div id="mobileMenu" class="mobileMenuList">
+            <ul>
+                <li><a href="#page-menu">MENU</a></li>
+                <li><a href="#">OFFERS</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">FIND US</a></li>
+            </ul>
+        </div>
+
+        <div class="allegriaMainTitleContainer">
+            <img src="img/allegriatext.png" />
+        </div>
+
+
+
+    </header>
+    <a href="#">
+        <div class="followUsBox">
+
+            <img class="facebookIcon" src="img/facebook.png" />
+            <t class="followUsText" style="position: relative;top: 5px;">follow us</t>
+
+        </div>
+    </a>
+
+
+
+
+
+    <div id="page-offers" class="sectionTitle">
+        <p>OFFERS</p>
+    </div>
+    <div class="offersImage">
+
+    </div>
+
+
+    <div id="page-menu" class="sectionTitle">
+        <p>MENU</p>
+    </div>
+    <div class="menuImage">
+
+    </div>
+
+    <div id="page-contact" class="sectionTitle">
+        <p>CONTACT</p>
+    </div>
+    <div class="contactImage">
+
+    </div>
+
+    <div id="page-findus" class="sectionTitle">
+        <p>FIND US</p>
+    </div>
+
+
+    <script>
+        var logoHidden = 0;
+
+        $(window).scroll(function () {
+            if (window.pageYOffset > 102) {
+                if (logoHidden == 0) {
+                    $(".upperLogo").toggleClass("active");
+                    $(".lowerLogo").toggleClass("active");
+                    $(".openingTimes").toggleClass("active");
+                    $(".mainNav").toggleClass("active");
+                    $(".followUsBox").toggleClass("active");
+                    $(".followUsText").toggleClass("active");
+                    logoHidden = 1;
+                    console.log("logoHidden =" + logoHidden);
+                }
+            } else {
+                if (logoHidden == 1) {
+                    $(".upperLogo").toggleClass("active");
+                    $(".lowerLogo").removeClass("active");
+                    $(".openingTimes").removeClass("active");
+                    $(".mainNav").removeClass("active");
+                    $(".followUsBox").removeClass("active");
+                    $(".followUsText").removeClass("active");
+                    logoHidden = 0;
+                    console.log("logoHidden =" + logoHidden);
+                }
+            }
+
+        });
+
+
+    </script>
+
 </body>
 </html>

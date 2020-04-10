@@ -1,23 +1,24 @@
 ﻿<!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content=" initial-scale=1.0"/>
-<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-	
-<script src="js/modernizr-custom.min.js"></script>
-	<script src="js/respond.js"></script>
-	<!-- include external jQuery file but fall back to local file if external one fails to load !-->
-	<script  src="https://code.jquery.com/jquery-3.4.1.min.js"  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script> 
-	<script type="text/javascript">window.jQuery || document.write('<script type="text\/JavaScript" src="js\/jquery-3.4.1.mi.js"><\/script>')</script>
-	<script src="js/lightbox.js"></script>
-	<script src="js/prefixfree.min.js"></script>
-	<script src="js/jquery.slides.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content=" initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    <script src="js/modernizr-custom.min.js"></script>
+    <script src="js/respond.js"></script>
+    <!-- include external jQuery file but fall back to local file if external one fails to load !-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript">window.jQuery || document.write('<script type="text\/JavaScript" src="js\/jquery-3.4.1.mi.js"><\/script>')</script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/jquery.slides.min.js"></script>
     <script src="js/mainjs.js"></script>
-	
-<title>Allegria Ltd - Italian Restaurant</title>
+    <script src="https://kit.fontawesome.com/b2841de306.js" crossorigin="anonymous"></script>
+
+    <title>Allegria Ltd - Italian Restaurant</title>
 </head>
 
 <body>
@@ -67,6 +68,8 @@
                     (jQuery, window, document);
             });
 
+
+
         </script>
 
 
@@ -96,14 +99,14 @@
                 <ul id="desktopMenu">
                     <li><a href="#page-menu">MENU</a></li>
                     <li><a href="#page-offers">OFFERS</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                    <li><a href="#">FIND US</a></li>
+                    <li><a href="#page-contact">CONTACT</a></li>
+                    <li><a href="#page-findus">FIND US</a></li>
                 </ul>
 
                 <div class="menuContactNumber">
-                    <a id="menuContactDesktop" href="#">
-                        <img class="phoneIcon" src="img/phone.png" />
-                        01253 781 936
+                    <a id="menuContactDesktop" href="tel:01253-781-936">
+
+                        <i class="fas fa-phone-alt"></i> 01253 781 936
                     </a>
 
 
@@ -131,9 +134,9 @@
         <div id="mobileMenu" class="mobileMenuList">
             <ul>
                 <li><a href="#page-menu">MENU</a></li>
-                <li><a href="#">OFFERS</a></li>
-                <li><a href="#">CONTACT</a></li>
-                <li><a href="#">FIND US</a></li>
+                <li><a href="#page-offers">OFFERS</a></li>
+                <li><a href="#page-contact">CONTACT</a></li>
+                <li><a href="#page-findus">FIND US</a></li>
             </ul>
         </div>
 
@@ -141,10 +144,17 @@
             <img src="img/allegriatext.png" />
         </div>
 
+        <div class="welcomeTextBox">
+            <p>The new family friendly Italian restaurant in the heart of Lytham St Annes.</p>
+        </div>
+        <div class="welcomeTextBox2">
+            <p>We aim to provide top quality authentic Italian dishes using fresh, local produce and an extensive wine list to suit every palate.</p>
+        </div>
+
 
 
     </header>
-    <a href="#">
+    <a href="https://www.facebook.com/allegriaitalian/" target="_blank">
         <div class="followUsBox">
 
             <img class="facebookIcon" src="img/facebook.png" />
@@ -164,9 +174,11 @@
 
     </div>
 
+    <div>
 
-    <div id="page-menu" class="sectionTitle">
-        <p>MENU</p>
+    </div>
+    <div class="sectionTitle">
+        <p id="page-menu">MENU</p>
     </div>
     <div class="menuImage">
 
@@ -176,12 +188,28 @@
         <p>CONTACT</p>
     </div>
     <div class="contactImage">
+        <div class="contactTitle">
+            <img src="img/contactus.png"/>
+        </div>
 
+        <div class="contactPhone">
+            <a href="tel:01253-781-936"><p><i class=" fas fa-phone-alt"></i> 01253 781 936</p></a>
+        </div>
+        <div class="contactEmail">
+            <a href="mailto:allegriastannes@gmail.com"><p><i class="fas fa-envelope"></i> allegriastannes@gmail.com</p></a>
+        </div>
     </div>
 
     <div id="page-findus" class="sectionTitle">
         <p>FIND US</p>
     </div>
+    <div class="findUsImage">
+        <div class="address-box">
+            <!--Opens a new tab with a google maps search for the post code by altering the href string-->
+            <a href="https://maps.google.com/?q=FY81SB" target="_blank"><p>27 St Anne's Rd W, Lytham St Annes, FY8 1SB</p></a>
+        </div>
+    </div>
+
 
 
     <script>

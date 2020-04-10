@@ -12,9 +12,9 @@
     <!-- include external jQuery file but fall back to local file if external one fails to load !-->
     <!--<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>-->
     <script type="text/javascript">window.jQuery || document.write('<script type="text\/JavaScript" src="js\/jquery-3.4.1.min.js"><\/script>')</script>
-    <script src="js/lightbox.js"></script>
-    <script src="js/prefixfree.min.js"></script>
-    <script src="js/jquery.slides.min.js"></script>
+
+   
+
     <script src="js/mainjs.js"></script>
     <!--<script src="https://kit.fontawesome.com/b2841de306.js" crossorigin="anonymous"></script>-->
 
@@ -44,33 +44,46 @@
                                 $(".upperLogo").toggleClass("active");
                                 $(".lowerLogo").toggleClass("active");
                                 $(".openingTimes").toggleClass("active");
+                                $(".mainNav").toggleClass("active");
                                 logoHidden = true;
                                 console.log("A");
                             }
                             else if (logoHidden == true && menuHidden == false && topOfWindow == true) {
                                 //Show Logo and hide menu
                                 if (navbarIsSticky == false) {
-                                      $(".mobileMenuList").toggleClass("active");
+                                    $(".mobileMenuList").toggleClass("active");
 
-                                $(".upperLogo").toggleClass("active");
-                                $(".lowerLogo").toggleClass("active");
-                                $(".openingTimes").toggleClass("active");
-                                logoHidden = false;
+                                    $(".upperLogo").toggleClass("active");
+                                    $(".lowerLogo").toggleClass("active");
+                                    $(".openingTimes").toggleClass("active");
+                                    logoHidden = false;
                                 }
-                              
+
                                 console.log("B");
                             }
-                            else if (logoHidden == true && menuHidden == true && topOfWindow == false) {                                
-                     
+                            else if (logoHidden == true && menuHidden == true && topOfWindow == false) {
+
                                 //$(".mobileMenuList").toggleClass("active");
                                 console.log("C");
-                              
+
                             }
                             else if (logoHidden == true && menuHidden == false && topOfWindow == false) {
-                               
-                                       //$(".mobileMenuList").removeClass("active");
-                           console.log("D");
-                             
+
+                                //$(".mobileMenuList").removeClass("active");
+                                console.log("D");
+
+                            }
+                            else {
+                                if (navbarIsSticky == false) {
+                                    $(".mobileMenuList").toggleClass("active");
+
+                                    $(".upperLogo").toggleClass("active");
+                                    $(".lowerLogo").toggleClass("active");
+                                    $(".openingTimes").toggleClass("active");
+                                    $(".mainNav").toggleClass("active");
+                                    logoHidden = false;
+                                }
+                                console.log("E");
                             }
 
                             //Toggle menu visibility and flag.
@@ -280,11 +293,17 @@
                 if (window.pageYOffset > 102) {
                     topOfWindow = false;
                 if (logoHidden == false) {
-                    $(".upperLogo").toggleClass("active");
+                   
+                     if (menuHidden == false) {
+
+                        }
+                     else {
+                          $(".upperLogo").toggleClass("active");
                     $(".lowerLogo").toggleClass("active");
                     $(".openingTimes").toggleClass("active");
-                    $(".mainNav").toggleClass("active");
-                    $(".mobileMenuList").toggleClass("active");
+                            $(".mainNav").toggleClass("active");
+                            $(".mobileMenuList").toggleClass("active");
+                        }
                     $(".followUsBox").toggleClass("active");
                     $(".followUsText").toggleClass("active");
                     logoHidden = true;
@@ -299,11 +318,18 @@
                    
                     if (logoHidden == true) {
                         topOfWindow = true;
-                        $(".upperLogo").toggleClass("active");
+
+                        if (menuHidden == false) {
+
+                        }
+                        else {
+                                                    $(".upperLogo").toggleClass("active");
                         $(".lowerLogo").toggleClass("active");
                         $(".openingTimes").toggleClass("active");
-                        $(".mainNav").toggleClass("active");
-                        $(".mobileMenuList").toggleClass("active");
+                            $(".mainNav").toggleClass("active");
+                            $(".mobileMenuList").toggleClass("active");
+                        }
+
                         $(".followUsBox").toggleClass("active");
                         $(".followUsText").toggleClass("active");
                         logoHidden = false;

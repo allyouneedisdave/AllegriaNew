@@ -10,13 +10,13 @@
     <script src="js/modernizr-custom.min.js"></script>
     <script src="js/respond.js"></script>
     <!-- include external jQuery file but fall back to local file if external one fails to load !-->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script type="text/javascript">window.jQuery || document.write('<script type="text\/JavaScript" src="js\/jquery-3.4.1.mi.js"><\/script>')</script>
+    <!--<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>-->
+    <script type="text/javascript">window.jQuery || document.write('<script type="text\/JavaScript" src="js\/jquery-3.4.1.min.js"><\/script>')</script>
     <script src="js/lightbox.js"></script>
     <script src="js/prefixfree.min.js"></script>
     <script src="js/jquery.slides.min.js"></script>
     <script src="js/mainjs.js"></script>
-    <script src="https://kit.fontawesome.com/b2841de306.js" crossorigin="anonymous"></script>
+    <!--<script src="https://kit.fontawesome.com/b2841de306.js" crossorigin="anonymous"></script>-->
 
     <title>Allegria Ltd - Italian Restaurant</title>
 </head>
@@ -27,30 +27,67 @@
     <header id="page-top" class="header-image">
 
         <script>
-            var menuHidden = 1;
+            var menuHidden = true;
+            var logoHidden = false;
+            var navbarIsSticky = false;
+            var topOfWindow = true;
+
             $(document).ready(function () {
                 (function ($, window, document, undefined) {
                     'use strict';
                     $(function () {
                         $("#mobileMenu").hide();
                         $(".toggleMobile").click(function () {
-                            if (logoHidden == true) {
-                                //figure out how to stop mobile menu display
-                                //issue when navbar is sticky
-                            } else {
-                                //$(this).toggleClass("active");
+
+                            if (logoHidden == false && menuHidden == true && topOfWindow == true) {
+                                //Hide logo and show menu
                                 $(".upperLogo").toggleClass("active");
                                 $(".lowerLogo").toggleClass("active");
                                 $(".openingTimes").toggleClass("active");
+                                logoHidden = true;
+                                console.log("A");
+                            }
+                            else if (logoHidden == true && menuHidden == false && topOfWindow == true) {
+                                //Show Logo and hide menu
+                                if (navbarIsSticky == false) {
+                                      $(".mobileMenuList").toggleClass("active");
+
+                                $(".upperLogo").toggleClass("active");
+                                $(".lowerLogo").toggleClass("active");
+                                $(".openingTimes").toggleClass("active");
+                                logoHidden = false;
+                                }
+                              
+                                console.log("B");
+                            }
+                            else if (logoHidden == true && menuHidden == true && topOfWindow == false) {                                
+                     
+                                //$(".mobileMenuList").toggleClass("active");
+                                console.log("C");
+                              
+                            }
+                            else if (logoHidden == true && menuHidden == false && topOfWindow == false) {
+                               
+                                       //$(".mobileMenuList").removeClass("active");
+                           console.log("D");
+                             
                             }
 
+                            //Toggle menu visibility and flag.
                             $("#mobileMenu").slideToggle(500);
-                            if (menuHidden == 1) {
-                                menuHidden = 0;
+                            if (menuHidden == true) {
+                                menuHidden = false;
                             } else {
-                                menuHidden = 1;
+                                menuHidden = true;
                             }
+
                             console.log("menuHidden = " + menuHidden);
+                            console.log("logoHidden = " + logoHidden);
+                            console.log("navbarIsSticky = " + navbarIsSticky);
+                            console.log("topOfWindow = " + topOfWindow);
+
+
+                           
 
                         });
                     });
@@ -58,10 +95,10 @@
                         if ($(this).width() > 1100) {
 
                             $("#mobileMenu").hide();
-                            $(".toggleMobile").removeClass("active");
-                            $(".lowerLogo").removeClass("active");
-                            $(".openingTimes").removeClass("active");
-                            menuHidden = 1;
+                            $(".toggleMobile").toggleClass("active");
+                            $(".lowerLogo").toggleClass("active");
+                            $(".openingTimes").toggleClass("active");
+                            menuHidden = true;
                         }
                     });
                 })
@@ -91,7 +128,7 @@
         <div id="mainNavTop" class="mainNav">
             <nav>
                 <div class="middleLogo">
-                    <img src="img/logotext.png" />
+                    <a href="#page-top"><img src="img/logotext.png" /></a>
 
                 </div>
 
@@ -213,37 +250,84 @@
 
 
     <script>
-        var logoHidden = 0;
+        //Hide and show elements when the window is scrolled.
+        //Navbar will become sticky when it reaches the top of the window.
+
+
+        //var logoHidden = 0;
+
+        //$(window).scroll(function () {
+
+        //    if (menuHidden =)
+
+        //});
+
+
+
+
+  
 
         $(window).scroll(function () {
-            if (window.pageYOffset > 102) {
-                if (logoHidden == 0) {
+
+            //if (menuHidden == false) {
+            //    if (logoHidden == true) {
+            //        if (navbarIsSticky == false) {
+            //            $(".mainNav").toggleClass("active");
+            //        }
+       
+            //    }
+            //} else {
+                if (window.pageYOffset > 102) {
+                    topOfWindow = false;
+                if (logoHidden == false) {
                     $(".upperLogo").toggleClass("active");
                     $(".lowerLogo").toggleClass("active");
                     $(".openingTimes").toggleClass("active");
                     $(".mainNav").toggleClass("active");
+                    $(".mobileMenuList").toggleClass("active");
                     $(".followUsBox").toggleClass("active");
                     $(".followUsText").toggleClass("active");
-                    logoHidden = 1;
-                    console.log("logoHidden =" + logoHidden);
+                    logoHidden = true;
+                    navbarIsSticky = true;
+                    console.log("logoHidden = " + logoHidden);
+                    console.log("menuHidden = " + menuHidden);
+                    console.log("topOfWindow = " + topOfWindow);
+                    console.log("navbarIsSticky = " + navbarIsSticky);
                 }
-            } else {
-                if (logoHidden == 1) {
-                    $(".upperLogo").toggleClass("active");
-                    $(".lowerLogo").removeClass("active");
-                    $(".openingTimes").removeClass("active");
-                    $(".mainNav").removeClass("active");
-                    $(".followUsBox").removeClass("active");
-                    $(".followUsText").removeClass("active");
-                    logoHidden = 0;
-                    console.log("logoHidden =" + logoHidden);
                 }
+                else {
+                   
+                    if (logoHidden == true) {
+                        topOfWindow = true;
+                        $(".upperLogo").toggleClass("active");
+                        $(".lowerLogo").toggleClass("active");
+                        $(".openingTimes").toggleClass("active");
+                        $(".mainNav").toggleClass("active");
+                        $(".mobileMenuList").toggleClass("active");
+                        $(".followUsBox").toggleClass("active");
+                        $(".followUsText").toggleClass("active");
+                        logoHidden = false;
+                        navbarIsSticky = false;
+                        console.log("logoHidden = " + logoHidden);
+                        console.log("menuHidden = " + menuHidden);
+                        console.log("topOfWindow = " + topOfWindow);
+                        console.log("navbarIsSticky = " + navbarIsSticky);
+                    }
+ 
+                        
+
             }
+           //}
+
 
         });
 
 
     </script>
+
+    <footer>
+        &copy; Copyright 2020 by Allegria Ltd. All Rights Reserved.
+    </footer>
 
 </body>
 </html>

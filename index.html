@@ -10,13 +10,13 @@
     <script src="js/modernizr-custom.min.js"></script>
     <script src="js/respond.js"></script>
     <!-- include external jQuery file but fall back to local file if external one fails to load !-->
-    <!--<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type="text/javascript">window.jQuery || document.write('<script type="text\/JavaScript" src="js\/jquery-3.4.1.min.js"><\/script>')</script>
 
    
 
     <script src="js/mainjs.js"></script>
-    <!--<script src="https://kit.fontawesome.com/b2841de306.js" crossorigin="anonymous"></script>-->
+    <script src="https://kit.fontawesome.com/b2841de306.js" crossorigin="anonymous"></script>
 
     <title>Allegria Ltd - Italian Restaurant</title>
 </head>
@@ -56,6 +56,9 @@
                                     $(".upperLogo").toggleClass("active");
                                     $(".lowerLogo").toggleClass("active");
                                     $(".openingTimes").toggleClass("active");
+
+                                    $(".mainNav").toggleClass("active");
+
                                     logoHidden = false;
                                 }
 
@@ -74,7 +77,7 @@
 
                             }
                             else {
-                                if (navbarIsSticky == false) {
+                                if (navbarIsSticky == false && logoHidden == false) {
                                     $(".mobileMenuList").toggleClass("active");
 
                                     $(".upperLogo").toggleClass("active");
@@ -108,12 +111,24 @@
                         if ($(this).width() > 1100) {
 
                             $("#mobileMenu").hide();
-                            $(".toggleMobile").toggleClass("active");
-                            $(".lowerLogo").toggleClass("active");
-                            $(".openingTimes").toggleClass("active");
+                   
+                            if (logoHidden == true && navbarIsSticky == false) {
+                                //If the logo is hidden and the navbar is not sticky
+                                //then scroll auto scroll down and up to trigger
+                                //visibility of relevent element classes
+                                var y = $(window).scrollTop();
+                                $(window).scrollTop(y + 150);
+                                $(window).scrollTop(0);
+                            }
+                            
+
                             menuHidden = true;
+
+
+
                         }
                     });
+
                 })
                     (jQuery, window, document);
             });
@@ -253,6 +268,7 @@
     <div id="page-findus" class="sectionTitle">
         <p>FIND US</p>
     </div>
+
     <div class="findUsImage">
         <div class="address-box">
             <!--Opens a new tab with a google maps search for the post code by altering the href string-->

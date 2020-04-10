@@ -232,6 +232,7 @@ header {
     width: auto;
     height: auto;
     background-image: url("../img/map.png");
+    
     /*background-position: top center;*/
     /*background-size: contain;*/
     background-size: cover;
@@ -572,7 +573,28 @@ header {
         left: 20%;
         right: 20%;
     }
-	
+        .middleLogo {
+        /*float:none;
+        margin-left:35%;
+        position:absolute;*/
+        position: absolute;
+        margin: auto;
+        left: 0px;
+        right: 0px;
+        padding-top: 4px;
+    }
+    .upperLogo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .lowerLogo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .openingTimes {
+        display: none;
+    }
 }
 
 /*For mobile view, toggle visibility of some elements and center the logo*/

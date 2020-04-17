@@ -3,373 +3,286 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content=" initial-scale=1.0" />
+
+    <!--SEO-->
+    <meta name="description" content="Allegria, an Italian restaurant based in Lytham St Annes. We
+          are a family friendly restaurant providing authentic Italian food using fresh, local
+          produce. We have an extensive wine list."/>
+
+    <!--Reset html styles-->
     <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" />
+    <!--Main css for document-->
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+    <!--External link to use google fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
+    <!--Browser and legacy support-->
     <script src="js/modernizr-custom.min.js"></script>
     <script src="js/respond.js"></script>
-    <!-- include external jQuery file but fall back to local file if external one fails to load !-->
+
+    <!--Attempt to use jQuery from external link, fallback to local file if link is unavailable-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type="text/javascript">window.jQuery || document.write('<script type="text\/JavaScript" src="js\/jquery-3.4.1.min.js"><\/script>')</script>
 
-   
-
     <script src="js/mainjs.js"></script>
+
+    <!--External link for font icons for phone, mail etc-->
     <script src="https://kit.fontawesome.com/b2841de306.js" crossorigin="anonymous"></script>
 
-    <title>Allegria Ltd - Italian Restaurant</title>
+    <!--Italian flag favicon-->
+    <link rel="icon" type="image/png" href="img/favicon2Artboard 1.png">
+
+    <title>Allegria Ltd - Italian Restaurant - Lytham St Annes</title>
 </head>
 
-<body>
-
-    <!--Header will include the main menu-->
-    <header id="page-top" class="header-image">
-
-        <script>
-            var menuHidden = true;
-            var logoHidden = false;
-            var navbarIsSticky = false;
-            var topOfWindow = true;
-
-            $(document).ready(function () {
-                (function ($, window, document, undefined) {
-                    'use strict';
-                    $(function () {
-                        $("#mobileMenu").hide();
-                        $(".toggleMobile").click(function () {
-
-                            if (logoHidden == false && menuHidden == true && topOfWindow == true) {
-                                //Hide logo and show menu
-                                $(".upperLogo").toggleClass("active");
-                                $(".lowerLogo").toggleClass("active");
-                                $(".openingTimes").toggleClass("active");
-                                $(".mainNav").toggleClass("active");
-                                logoHidden = true;
-                                console.log("A");
-                            }
-                            else if (logoHidden == true && menuHidden == false && topOfWindow == true) {
-                                //Show Logo and hide menu
-                                if (navbarIsSticky == false) {
-                                    $(".mobileMenuList").toggleClass("active");
-
-                                    $(".upperLogo").toggleClass("active");
-                                    $(".lowerLogo").toggleClass("active");
-                                    $(".openingTimes").toggleClass("active");
-
-                                    $(".mainNav").toggleClass("active");
-
-                                    logoHidden = false;
-                                }
-
-                                console.log("B");
-                            }
-                            else if (logoHidden == true && menuHidden == true && topOfWindow == false) {
-
-                                //$(".mobileMenuList").toggleClass("active");
-                                console.log("C");
-
-                            }
-                            else if (logoHidden == true && menuHidden == false && topOfWindow == false) {
-
-                                //$(".mobileMenuList").removeClass("active");
-                                console.log("D");
-
-                            }
-                            else {
-                                if (navbarIsSticky == false && logoHidden == false) {
-                                    $(".mobileMenuList").toggleClass("active");
-
-                                    $(".upperLogo").toggleClass("active");
-                                    $(".lowerLogo").toggleClass("active");
-                                    $(".openingTimes").toggleClass("active");
-                                    $(".mainNav").toggleClass("active");
-                                    logoHidden = false;
-                                }
-                                console.log("E");
-                            }
-
-                            //Toggle menu visibility and flag.
-                            $("#mobileMenu").slideToggle(500);
-                            if (menuHidden == true) {
-                                menuHidden = false;
-                            } else {
-                                menuHidden = true;
-                            }
-
-                            console.log("menuHidden = " + menuHidden);
-                            console.log("logoHidden = " + logoHidden);
-                            console.log("navbarIsSticky = " + navbarIsSticky);
-                            console.log("topOfWindow = " + topOfWindow);
-
-
-                           
-
-                        });
-                    });
-                    $(window).on("resize", function () {
-                        if ($(this).width() > 1100) {
-
-                            $("#mobileMenu").hide();
-                   
-                            if (logoHidden == true && navbarIsSticky == false) {
-                                //If the logo is hidden and the navbar is not sticky
-                                //then scroll auto scroll down and up to trigger
-                                //visibility of relevent element classes
-                                var y = $(window).scrollTop();
-                                $(window).scrollTop(y + 150);
-                                $(window).scrollTop(0);
-                            }
-                            
-
-                            menuHidden = true;
-
-
-
-                        }
-                    });
-
-                })
-                    (jQuery, window, document);
-            });
-
-
-
-        </script>
-
-
-
-
-
-
-
-
-
-        <div id="openingTimesTop" class="openingTimes">
-            <p>Mon - Fri: 5pm - 10pm</p>
-            <p>Sat - Sun: 12pm - 10pm</p>
-        </div>
-        <div id="upperLogoSun" class="upperLogo">
-            <img src="img/sunupperdark.png" />
-        </div>
-
-        <div id="mainNavTop" class="mainNav">
-            <nav>
-                <div class="middleLogo">
-                    <a href="#page-top"><img src="img/logotext.png" /></a>
-
-                </div>
+    <body>
+        <header id="page-top" class="header-image" title="A plate of Gnocci with walnuts, cheese and herbs">
+            <script>
+                // Set flags to track the current state of the responsive elements of the site
+                // and toggle css classes through condition statements.
+                // Console logs were used for debugging. These can be removed when the site is published.
+                var menuHidden = true;
+                var logoHidden = false;
+                var navbarIsSticky = false;
+                var topOfWindow = true;
+                $(document).ready(function() {
+	                (function($, window, document, undefined) {
+		                'use strict';
+		                $(function() {
+			                $("#mobileMenu").hide();
+			                $(".toggleMobile").click(function() {
+				                if (logoHidden == false && menuHidden == true && topOfWindow == true) {
+					                //Hide logo and show menu
+					                $(".upperLogo").toggleClass("active");
+					                $(".lowerLogo").toggleClass("active");
+					                $(".openingTimes").toggleClass("active");
+					                $(".mainNav").toggleClass("active");
+					                logoHidden = true;
+					                console.log("A");
+				                } else if (logoHidden == true && menuHidden == false && topOfWindow == true) {
+					                //Show Logo and hide menu
+					                if (navbarIsSticky == false) {
+						                $(".mobileMenuList").toggleClass("active");
+						                $(".upperLogo").toggleClass("active");
+						                $(".lowerLogo").toggleClass("active");
+						                $(".openingTimes").toggleClass("active");
+						                $(".mainNav").toggleClass("active");
+						                logoHidden = false;
+					                }
+					                console.log("B");
+				                } else if (logoHidden == true && menuHidden == true && topOfWindow == false) {
+					                console.log("C");
+				                } else if (logoHidden == true && menuHidden == false && topOfWindow == false) {
+					                console.log("D");
+				                } else {
+					                if (navbarIsSticky == false && logoHidden == false) {
+						                $(".mobileMenuList").toggleClass("active");
+						                $(".upperLogo").toggleClass("active");
+						                $(".lowerLogo").toggleClass("active");
+						                $(".openingTimes").toggleClass("active");
+						                $(".mainNav").toggleClass("active");
+						                logoHidden = false;
+					                }
+					                console.log("E");
+				                }
+				                //Toggle menu visibility and flag.
+				                $("#mobileMenu").slideToggle(500);
+				                if (menuHidden == true) {
+					                menuHidden = false;
+				                } else {
+					                menuHidden = true;
+				                }
+				                console.log("menuHidden = " + menuHidden);
+				                console.log("logoHidden = " + logoHidden);
+				                console.log("navbarIsSticky = " + navbarIsSticky);
+				                console.log("topOfWindow = " + topOfWindow);
+			                });
+		                });
+		                // Hide the mobile menu when the screen is resized and large enough to
+		                // display the main navar menu.
+		                $(window).on("resize", function() {
+			                if ($(this).width() > 1100) {
+				                $("#mobileMenu").hide();
+				                if (logoHidden == true && navbarIsSticky == false) {
+					                //If the logo is hidden and the navbar is not sticky
+					                //then scroll auto scroll down and up to trigger
+					                //visibility of relevent element classes
+					                var y = $(window).scrollTop();
+					                $(window).scrollTop(y + 150);
+					                $(window).scrollTop(0);
+				                }
+				                menuHidden = true;
+			                }
+		                });
+		                // Hide and show elements when the window is scrolled.
+		                // Navbar will become sticky when it reaches the top of the window.
+		                $(window).scroll(function() {
+			                if (window.pageYOffset > 102) {
+				                topOfWindow = false;
+				                if (logoHidden == false) {
+					                if (menuHidden == false) {} else {
+						                $(".upperLogo").toggleClass("active");
+						                $(".lowerLogo").toggleClass("active");
+						                $(".openingTimes").toggleClass("active");
+						                $(".mainNav").toggleClass("active");
+						                $(".mobileMenuList").toggleClass("active");
+					                }
+					                $(".followUsBox").toggleClass("active");
+					                $(".followUsText").toggleClass("active");
+					                logoHidden = true;
+					                navbarIsSticky = true;
+					                console.log("logoHidden = " + logoHidden);
+					                console.log("menuHidden = " + menuHidden);
+					                console.log("topOfWindow = " + topOfWindow);
+					                console.log("navbarIsSticky = " + navbarIsSticky);
+				                }
+			                } else {
+				                if (logoHidden == true) {
+					                topOfWindow = true;
+					                if (menuHidden == false) {} else {
+						                $(".upperLogo").toggleClass("active");
+						                $(".lowerLogo").toggleClass("active");
+						                $(".openingTimes").toggleClass("active");
+						                $(".mainNav").toggleClass("active");
+						                $(".mobileMenuList").toggleClass("active");
+					                }
+					                $(".followUsBox").toggleClass("active");
+					                $(".followUsText").toggleClass("active");
+					                logoHidden = false;
+					                navbarIsSticky = false;
+					                console.log("logoHidden = " + logoHidden);
+					                console.log("menuHidden = " + menuHidden);
+					                console.log("topOfWindow = " + topOfWindow);
+					                console.log("navbarIsSticky = " + navbarIsSticky);
+				                }
+			                }
+		                });
+	                })
+	                (jQuery, window, document);
+                });
+            </script>
 
 
-                <ul id="desktopMenu">
+            <div id="openingTimesTop" class="openingTimes" title="">
+                <p>Mon - Fri: 5pm - 10pm</p>
+                <p>Sat - Sun: 12pm - 10pm</p>
+            </div>
+
+            <div id="upperLogoSun" class="upperLogo" title="">
+                <img src="img/sunupperdark.png" alt="The top half of the Allegria sun logo"/>
+            </div>
+
+            <div id="mainNavTop" class="mainNav" title="">
+                <nav>
+                    <div class="middleLogo">
+                        <a href="#page-top"><img src="img/logotext.png" alt="The middle part of the Allegria logo that displays
+                                                 the Allegria text followed by Italian Restaurant"/></a>
+                    </div>
+
+                    <ul id="desktopMenu">
+                        <li><a href="#page-menu">MENU</a></li>
+                        <li><a href="#page-offers">OFFERS</a></li>
+                        <li><a href="#page-contact">CONTACT</a></li>
+                        <li><a href="#page-findus">FIND US</a></li>
+                    </ul>
+
+                    <div class="menuContactNumber" title="">
+                        <a id="menuContactDesktop" href="tel:01253-781-936">
+                            <i class="fas fa-phone-alt"></i> 01253 781 936
+                        </a>
+                    </div>
+
+                    <!--Hamburger style menu toggle with Italian flag colours.-->
+                    <div class="toggleMobile" title="">
+                        <span class="menu1"></span>
+                        <span class="menu2"></span>
+                        <span class="menu3"></span>
+                    </div>
+                </nav>
+            </div>
+
+            <div id="lowerLogoSun" class="lowerLogo" title="">
+                <img src="img/sunlowerdark.png" alt="The lower half of the Allegria sun logo"/>
+            </div>
+
+            <!--Hidden mobile menu that is displayed through jQuery when screen width changes.-->
+            <div id="mobileMenu" class="mobileMenuList" title=""> 
+                <ul>
                     <li><a href="#page-menu">MENU</a></li>
                     <li><a href="#page-offers">OFFERS</a></li>
                     <li><a href="#page-contact">CONTACT</a></li>
                     <li><a href="#page-findus">FIND US</a></li>
                 </ul>
+            </div>
 
-                <div class="menuContactNumber">
-                    <a id="menuContactDesktop" href="tel:01253-781-936">
+            <div class="allegriaMainTitleContainer" title="">
+                <img src="img/allegriatext.png" alt="The main title containing the word Allegria"/>
+            </div>
 
-                        <i class="fas fa-phone-alt"></i> 01253 781 936
-                    </a>
+            <div class="welcomeTextBox" title="">
+                <p>The new family friendly Italian restaurant in the heart of Lytham St Annes.</p>
+            </div>
 
+            <div class="welcomeTextBox2" title="">
+                <p>We aim to provide top quality authentic Italian dishes using fresh, local produce and an extensive wine list to suit every palate.</p>
+            </div>
+        </header>
 
-                </div>
+        <!--Launched a new tab with the facebook page.-->
+        <a href="https://www.facebook.com/allegriaitalian/" target="_blank">
+            <div class="followUsBox">
+                <img class="facebookIcon" src="img/facebook.png" alt="The facebook logo, a lower case f in a circle"/>
+                <t class="followUsText" style="position: relative;top: 5px;">follow us</t>
+            </div>
+        </a>
 
-                <div class="toggleMobile">
-                    <span class="menu1"></span>
-                    <span class="menu2"></span>
-                    <span class="menu3"></span>
-                </div>
-
-
-            </nav>
-
+        <div id="page-offers" class="sectionTitle">
+            <p>OFFERS</p>
         </div>
 
-
-
-        <div id="lowerLogoSun" class="lowerLogo">
-            <img src="img/sunlowerdark.png" />
+        <div class="offersImage" title="A Valentine's Day offers menu from Allegria">
         </div>
 
-
-
-        <div id="mobileMenu" class="mobileMenuList">
-            <ul>
-                <li><a href="#page-menu">MENU</a></li>
-                <li><a href="#page-offers">OFFERS</a></li>
-                <li><a href="#page-contact">CONTACT</a></li>
-                <li><a href="#page-findus">FIND US</a></li>
-            </ul>
+        <div class="sectionTitle">
+            <p id="page-menu">MENU</p>
         </div>
 
-        <div class="allegriaMainTitleContainer">
-            <img src="img/allegriatext.png" />
+        <div class="menuImage" title="The Allegria a la carte menu">
         </div>
 
-        <div class="welcomeTextBox">
-            <p>The new family friendly Italian restaurant in the heart of Lytham St Annes.</p>
-        </div>
-        <div class="welcomeTextBox2">
-            <p>We aim to provide top quality authentic Italian dishes using fresh, local produce and an extensive wine list to suit every palate.</p>
+        <div id="page-contact" class="sectionTitle">
+            <p>CONTACT</p>
         </div>
 
+        <div class="contactImage" title="A waiter at a bar serving a cup of coffee on a tray">
+            <div class="contactTitle" title="">
+                <img src="img/contactus.png"  alt="A title that displays the words Contact Us"/>
+            </div>
 
+            <div class="contactPhone" title="">
+                <!--Launched the native phone application when clicked.-->
+                <a href="tel:01253-781-936"><p><i class=" fas fa-phone-alt"></i> 01253 781 936</p></a>
+            </div>
 
-    </header>
-    <a href="https://www.facebook.com/allegriaitalian/" target="_blank">
-        <div class="followUsBox">
-
-            <img class="facebookIcon" src="img/facebook.png" />
-            <t class="followUsText" style="position: relative;top: 5px;">follow us</t>
-
-        </div>
-    </a>
-
-
-
-
-
-    <div id="page-offers" class="sectionTitle">
-        <p>OFFERS</p>
-    </div>
-    <div class="offersImage">
-
-    </div>
-
-    <div>
-
-    </div>
-    <div class="sectionTitle">
-        <p id="page-menu">MENU</p>
-    </div>
-    <div class="menuImage">
-
-    </div>
-
-    <div id="page-contact" class="sectionTitle">
-        <p>CONTACT</p>
-    </div>
-    <div class="contactImage">
-        <div class="contactTitle">
-            <img src="img/contactus.png"/>
+            <div class="contactEmail" title="">
+                <!--Launches the native email application when clicked.-->
+                <a href="mailto:allegriastannes@gmail.com"><p><i class="fas fa-envelope"></i> allegriastannes@gmail.com</p></a>
+            </div>
         </div>
 
-        <div class="contactPhone">
-            <a href="tel:01253-781-936"><p><i class=" fas fa-phone-alt"></i> 01253 781 936</p></a>
+        <div id="page-findus" class="sectionTitle" >
+            <p>FIND US</p>
         </div>
-        <div class="contactEmail">
-            <a href="mailto:allegriastannes@gmail.com"><p><i class="fas fa-envelope"></i> allegriastannes@gmail.com</p></a>
+
+        <div class="findUsImage" title="A map showing the location of the Allegria Restaurant in Lytham St Annes">
+            <div class="address-box">
+                <!--Opens a new tab with a google maps search for the post code by altering the href string-->
+                <a href="https://maps.google.com/?q=FY81SB" target="_blank" title=""><p>27 St Anne's Rd W, Lytham St Annes, FY8 1SB</p></a>
+            </div>
         </div>
-    </div>
 
-    <div id="page-findus" class="sectionTitle">
-        <p>FIND US</p>
-    </div>
-
-    <div class="findUsImage">
-        <div class="address-box">
-            <!--Opens a new tab with a google maps search for the post code by altering the href string-->
-            <a href="https://maps.google.com/?q=FY81SB" target="_blank"><p>27 St Anne's Rd W, Lytham St Annes, FY8 1SB</p></a>
-        </div>
-    </div>
-
-
-
-    <script>
-        //Hide and show elements when the window is scrolled.
-        //Navbar will become sticky when it reaches the top of the window.
-
-
-        //var logoHidden = 0;
-
-        //$(window).scroll(function () {
-
-        //    if (menuHidden =)
-
-        //});
-
-
-
-
-  
-
-        $(window).scroll(function () {
-
-            //if (menuHidden == false) {
-            //    if (logoHidden == true) {
-            //        if (navbarIsSticky == false) {
-            //            $(".mainNav").toggleClass("active");
-            //        }
-       
-            //    }
-            //} else {
-                if (window.pageYOffset > 102) {
-                    topOfWindow = false;
-                if (logoHidden == false) {
-                   
-                     if (menuHidden == false) {
-
-                        }
-                     else {
-                          $(".upperLogo").toggleClass("active");
-                    $(".lowerLogo").toggleClass("active");
-                    $(".openingTimes").toggleClass("active");
-                            $(".mainNav").toggleClass("active");
-                            $(".mobileMenuList").toggleClass("active");
-                        }
-                    $(".followUsBox").toggleClass("active");
-                    $(".followUsText").toggleClass("active");
-                    logoHidden = true;
-                    navbarIsSticky = true;
-                    console.log("logoHidden = " + logoHidden);
-                    console.log("menuHidden = " + menuHidden);
-                    console.log("topOfWindow = " + topOfWindow);
-                    console.log("navbarIsSticky = " + navbarIsSticky);
-                }
-                }
-                else {
-                   
-                    if (logoHidden == true) {
-                        topOfWindow = true;
-
-                        if (menuHidden == false) {
-
-                        }
-                        else {
-                                                    $(".upperLogo").toggleClass("active");
-                        $(".lowerLogo").toggleClass("active");
-                        $(".openingTimes").toggleClass("active");
-                            $(".mainNav").toggleClass("active");
-                            $(".mobileMenuList").toggleClass("active");
-                        }
-
-                        $(".followUsBox").toggleClass("active");
-                        $(".followUsText").toggleClass("active");
-                        logoHidden = false;
-                        navbarIsSticky = false;
-                        console.log("logoHidden = " + logoHidden);
-                        console.log("menuHidden = " + menuHidden);
-                        console.log("topOfWindow = " + topOfWindow);
-                        console.log("navbarIsSticky = " + navbarIsSticky);
-                    }
- 
-                        
-
-            }
-           //}
-
-
-        });
-
-
-    </script>
-
-    <footer>
-        &copy; Copyright 2020 by Allegria Ltd. All Rights Reserved.
-    </footer>
-
-</body>
+        <footer>
+            &copy; Copyright 2020 by Allegria Ltd. All Rights Reserved.
+        </footer>
+    </body>
 </html>
